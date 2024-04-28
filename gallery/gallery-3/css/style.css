@@ -1,0 +1,51 @@
+.horizontal-scrolls {
+  margin-top: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 500px;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+
+.gallery {
+  cursor: pointer;
+  display: inline-block;
+  background-image: url(../images/gambar.png);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  height: 100%;
+  position: relative;
+  margin: 0 20px;
+}
+
+.placeholder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background-color: rgba(249, 249, 249, 1);
+  border-top-left-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  white-space: normal;
+}
+
+.placeholder h2 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.placeholder p {
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 100;
+}

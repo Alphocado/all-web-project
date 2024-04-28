@@ -1,0 +1,31 @@
+.sosmed .kotak{
+  width: 42px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+.sosmed h6 {
+  margin-top: 5px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.sosmed{  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.instagram .kotak {
+  background-color: rgba(255, 134, 107, 1);
+}
+.facebook .kotak {
+  background-color: rgba(67, 224, 234, 1);
+}
+.dribble .kotak {
+  background-color: rgba(252, 70, 212, 1);
+}
+.github .kotak {
+  background-color: rgba(88, 88, 88, 1);
+}

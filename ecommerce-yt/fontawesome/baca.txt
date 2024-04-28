@@ -1,0 +1,1 @@
+di folder css, link yang all.min.css dan fontawesome.min.css

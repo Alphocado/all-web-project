@@ -1,0 +1,19 @@
+halaman
+------------------
+login
+logout
+registrasi
+pendaftaran barang
+pembelian
+stok barang
+
+database
+------------------
+- kasir_pelanggan: 3
+Menyimpan informasi pelanggan, termasuk PelangganID, NamaPelanggan, Alamat, dan NomorTelepon.
+- kasir_penjualan: 
+Menyimpan informasi penjualan, termasuk PenjualanID, TanggalPenjualan, TotalHarga, dan PelangganID sebagai foreign key yang menghubungkan ke tabel pelanggan.
+- kasir_detailpenjualan: 
+Menyimpan detail dari setiap item yang dijual, termasuk DetailID, PenjualanID sebagai foreign key, ProdukID sebagai foreign key, JumlahProduk, dan Subtotal.
+- kasir_produk: 
+Menyimpan informasi produk, termasuk ProdukID, NamaProduk, Harga, dan Stok.

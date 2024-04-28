@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  height: 100vh;
+  max-width: 100%;
+  width: 1200px;
+  margin-top: 50px;
+}
+
+h1 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 20px 25px;
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.center-title {
+  text-align: center;
+}

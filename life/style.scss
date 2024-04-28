@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none !important;
+}
+
+.young i {
+  color: lime;
+  text-shadow: 0 0 6px green, 0 0 10px lime;
+}
+.adult i {
+  color: cyan;
+  text-shadow: 0 0 6px blue, 0 0 10px cyan;
+}
+.old i {
+  color: gold;
+  text-shadow: 0 0 6px gold, 0 0 10px orange;
+}
+
+.clrmoney {
+  background-color: lime;
+  box-shadow: 0 0 6px green, 0 0 10px lime;
+  width: 0%;
+}
+.clrtime {
+  background-color: cyan;
+  box-shadow: 0 0 6px blue, 0 0 10px cyan;
+  width: 0%;
+}
+.clrenergy {
+  background-color: gold;
+  box-shadow: 0 0 6px gold, 0 0 10px orange;
+  width: 0%;
+}
+
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 20px;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .radio {
+    display: flex;
+    .checkParr {
+      width: 200px;
+      height: 50px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      .check {
+        border: 2px solid rgba($color: #fff, $alpha: .8);
+        border-radius: 100%;
+        width: 16px;
+        height: 16px;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        i {
+          position: absolute;
+          font-size: 1px;
+          bottom: -2px;
+          right: -5px;
+          z-index: 9;
+          opacity: 0;
+          transition: font-size .3s, opacity .3s;
+        }
+      }
+      p {
+        margin: 10px;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .meaning {
+    width: 500px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1.2fr 3fr;
+    .mn{
+      text-transform: capitalize;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // border: 2px solid orange;
+    }
+    .bartag .bar {
+      border: 2px solid rgba($color: #fff, $alpha: .8);
+      border-radius: 20px;
+      width: 300px;
+      height: 20px;
+      // overflow: hidden;
+      .clr {
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+  }
+}

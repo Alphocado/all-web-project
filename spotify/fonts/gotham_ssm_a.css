@@ -1,0 +1,24 @@
+@font-face{ 
+  font-family: "Gotham SSm A"; 
+  src: url("../fonts/src/Gotham\ SSM\ A/Tp6mrV8S");
+  font-weight:300; 
+  font-style:normal;
+} 
+@font-face{ 
+  font-family: "Gotham SSm A";
+  src: url("../fonts/src/Gotham\ SSM\ A/7-mj9RZj");
+  font-weight:400;
+  font-style:normal;
+}
+@font-face{
+  font-family: "Gotham SSm A";
+  src: url("../fonts/src/Gotham\ SSM\ A/J9bJaWDC");
+  font-weight:500;
+  font-style:normal;
+}
+@font-face{ 
+  font-family: "Gotham SSm A";
+  src: url("../fonts/src/Gotham\ SSM\ A/os4btKk4");
+  font-weight:700;
+  font-style:normal;
+}

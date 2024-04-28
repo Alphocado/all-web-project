@@ -1,0 +1,97 @@
+body {
+  font-family:  'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+  width: 320px;
+  margin: 0 auto;
+  background: salmon;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 3px solid black;
+  pointer-events: none;
+  opacity: .7;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  /* border: 1px solid #000; */
+  border-radius: 10px;
+  background: rgb(255, 167, 157);
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+/* Optional: Customize X and O colors */
+.cell.x {
+  color: blue;
+}
+
+.cell.o {
+  color: red;
+}
+
+.select_player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  
+}
+.select_player button {
+  padding: 20px 50px;
+  outline: none;
+  color: white;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bolder;
+} 
+.select_player button:nth-child(1) {
+  background-color: rgb(255, 66, 66);
+}
+.select_player button:nth-child(1):active {
+  background-color: rgb(255, 84, 84);
+}
+.select_player button:nth-child(2) {
+  background-color: rgb(59, 59, 255);
+}
+.select_player button:nth-child(2):active {
+  background-color: rgb(81, 81, 255);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.ulang {
+  padding: 20px 50px;
+  font-size: 20px;
+  /* font-weight: bold; */
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(17, 167, 17);
+  display: none;
+  /* display: inline; */
+}
