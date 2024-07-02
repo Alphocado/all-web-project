@@ -1,4 +1,4 @@
-// Navbar fixed
+// Navbar Fixed
 window.onscroll = function () {
   const header = document.querySelector("header");
   const fixedNav = header.offsetTop;
@@ -9,9 +9,9 @@ window.onscroll = function () {
     toTop.classList.remove("hidden");
     toTop.classList.add("flex");
   } else {
-    toTop.classList.add("hidden");
-    toTop.classList.remove("flex");
     header.classList.remove("navbar-fixed");
+    toTop.classList.remove("flex");
+    toTop.classList.add("hidden");
   }
 };
 
@@ -32,7 +32,7 @@ window.addEventListener("click", function (e) {
   }
 });
 
-// Dark mode toggle
+// Darkmode toggle
 const darkToggle = document.querySelector("#dark-toggle");
 const html = document.querySelector("html");
 
@@ -46,7 +46,7 @@ darkToggle.addEventListener("click", function () {
   }
 });
 
-// change mode
+// pindahkan posisi toggle sesuai mode
 if (
   localStorage.theme === "dark" ||
   (!("theme" in localStorage) &&

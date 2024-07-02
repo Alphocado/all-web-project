@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .title {
+    @apply text-6xl font-bold text-center my-5 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent p-5;
+  }
+
+  .grid-container {
+    @apply grid grid-cols-2 gap-2 content-center md:grid-cols-4 md:gap-4 md:p-4;
+  }
+
+  .grid-card {
+    @apply aspect-[4/3] rounded-lg hover:scale-95 transition-all duration-500 cursor-pointer;
+  }
+}

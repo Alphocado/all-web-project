@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mx-auto" x-data="game()">
+      <h1 class="title">Memory Game</h1>
+
+      <div class="grid-container">
+        <template x-for="card in cards">
+          <div class="aspect-[4/3]">
+            <div
+              class="grid-card"
+              :class="['bg-' + (card.flipped ? card.color : 'gray') + '-500', card.animate ]"
+              @click="flipCard(card)"
+              x-show="!card.cleared"
+            ></div>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <script>
+      const delay = (miliseconds = 1000) =>
+        new Promise((resolve) => setTimeout(resolve, miliseconds));
+      const game = () => {
+        return {
+          cards: [
+            { color: "red", flipped: false, cleared: false, animate: "" },
+            { color: "green", flipped: false, cleared: false, animate: "" },
+            { color: "blue", flipped: false, cleared: false, animate: "" },
+            { color: "yellow", flipped: false, cleared: false, animate: "" },
+            { color: "red", flipped: false, cleared: false, animate: "" },
+            { color: "green", flipped: false, cleared: false, animate: "" },
+            { color: "blue", flipped: false, cleared: false, animate: "" },
+            { color: "yellow", flipped: false, cleared: false, animate: "" },
+          ].sort(() => Math.random() - 0.5),
+          get flippedCards() {
+            return this.cards.filter((card) => card.flipped);
+          },
+
+          get remainingCards() {
+            return this.cards.filter((card) => !card.cleared);
+          },
+
+          async flipCard(card) {
+            if (this.flippedCards.length === 2) return;
+
+            // open / close card
+            card.flipped = !card.flipped;
+
+            //if there is 2 card open
+            if (this.flippedCards.length === 2) {
+              if (this.flippedCards[0].color === this.flippedCards[1].color) {
+                this.flippedCards.forEach(
+                  (card) =>
+                    (card.animate = "animate__animated animate__rubberBand")
+                );
+
+                await delay();
+                this.flippedCards.forEach((card) => (card.cleared = true));
+
+                if (this.remainingCards.length === 0) {
+                  alert("WON");
+                  location.reload();
+                }
+              }
+
+              this.flippedCards.forEach(
+                (card) => (card.animate = "animate__animated animate__shakeX")
+              );
+
+              // close again
+              await delay();
+              this.flippedCards.forEach((card) => (card.flipped = false));
+
+              this.remainingCards.forEach((card) => (card.animate = ""));
+            }
+          },
+        };
+      };
+    </script>
+  </body>
+</html>
